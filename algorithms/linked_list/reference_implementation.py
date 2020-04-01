@@ -1,7 +1,7 @@
 class LinkedList(object):
 
-    def __init__(self):
-        pass
+    def __init__(self, iterable=None):
+        self.iterable = iterable
 
     def add(self):
         pass
