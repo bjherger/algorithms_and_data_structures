@@ -1,11 +1,11 @@
-class LinkedList(object):
+class Queue(object):
     """
     A linked list implementation, with the following attributes
      - Singly linked
      - First in, first out
      - New elements added to end of list
      - Elements removed from beginning of list
-    API roughly based on https://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html
+    API roughly based on https://docs.oracle.com/javase/7/docs/api/java/util/Queue.html
     """
 
     def __init__(self, iterable_input=None):
@@ -69,9 +69,9 @@ class LinkedList(object):
         pass
 
 
-class LinkedListNode(object):
+class QueueNode(object):
     """
-    Helper class, representing a node in the LinkedList
+    Helper class, representing a node in the Queue
     """
 
     def __init__(self, data):

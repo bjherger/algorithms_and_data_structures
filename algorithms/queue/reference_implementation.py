@@ -1,14 +1,14 @@
 import logging
 
 
-class LinkedList(object):
+class Queue(object):
     """
-    A linked list implementation, with the following attributes
-     - Singly linked
+    A queue implementation, with the following attributes
+     - Singly linked list implementation
      - First in, first out
      - New elements added to end of list
      - Elements removed from beginning of list
-    API roughly based on https://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html
+    API roughly based on https://docs.oracle.com/javase/7/docs/api/java/util/Queue.html
     """
 
     def __init__(self, iterable_input=None):
@@ -23,7 +23,7 @@ class LinkedList(object):
         self.size = 0
 
         if iterable_input is not None:
-            logging.info(f'Creating data structure from iteratble: {iterable_input}')
+            logging.info(f'Creating data structure from iterable: {iterable_input}')
 
             for element in iterable_input:
                 logging.info(f'Adding element {element} to data structure')
@@ -41,7 +41,7 @@ class LinkedList(object):
             f'Adding element: {element} to data structure with head: {self.head}, tail: {self.tail} and size: {self.size}')
 
         # Reference variables
-        new_node = LinkedListNode(element)
+        new_node = QueueNode(element)
 
         # If no elements in data structure, initialize head and tail
         if self.size <= 0:
@@ -173,9 +173,9 @@ class LinkedList(object):
         return False
 
 
-class LinkedListNode(object):
+class QueueNode(object):
     """
-    Helper class, representing a node in the LinkedList
+    Helper class, representing a node in the Queue
     """
 
     def __init__(self, data):
