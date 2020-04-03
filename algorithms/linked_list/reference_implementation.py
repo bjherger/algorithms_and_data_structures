@@ -59,7 +59,7 @@ class LinkedList(object):
 
         logging.info(f'Added element: {element} to data structure with head: {self.head}, tail: {self.tail} '
                      f'and size: {self.size}')
-        pass
+        return None
 
     def remove(self):
         """
@@ -118,22 +118,23 @@ class LinkedList(object):
                     # Remove the current head
                     self.head = cursor_next
                     self.size -= 1
-                    return
+                    return None
                 # Check cursor_next for element
                 if cursor_next is not None and cursor_next.data == element:
                     # Remove cursor_next
                     new_next = cursor_next.next
                     cursor.next = new_next
                     self.size -= 1
-                    return
+                    return None
 
                 # If element not found, update cursor and cursor_next
                 cursor = cursor_next
                 cursor_next = cursor.next
-                
+
         # If we reach the end without finding the element, it is not in the data structure. Return ValueError
         raise ValueError('Element not in data structure')
-        pass
+
+        return None
 
     def peak(self):
         """
